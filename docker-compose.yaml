@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  tg_bot:
+    image: bot_image
+    restart: always
+    build:
+      context: ./tg_bot/
+    env_file:
+      - ./.env-release
+    ports:
+      - 9000:9000
